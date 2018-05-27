@@ -5,8 +5,15 @@ import { HomeComponent } from './shared/components/home/home.component';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
-import {MatCardModule} from '@angular/material/card';
+
+import {
+  MdcFabModule,
+  MdcMenuModule,
+  MdcCardModule,
+  MdcButtonModule,
+  MdcIconModule,
+  MdcIconToggleModule
+} from '@angular-mdc/web';
 
 import { AppComponent } from './app.component';
 import { ProjectCardComponent } from './feature/components/project-card/project-card.component';
@@ -16,10 +23,16 @@ import { ProjectCardComponent } from './feature/components/project-card/project-
     AppComponent,
     HomeComponent,
     ProjectCardComponent
+   
+    
   ],
   imports: [
-    MatIconModule,
-    MatCardModule,
+    MdcFabModule,
+    MdcMenuModule,
+    MdcButtonModule,
+    MdcCardModule,
+    MdcIconModule,
+    MdcIconToggleModule,
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
